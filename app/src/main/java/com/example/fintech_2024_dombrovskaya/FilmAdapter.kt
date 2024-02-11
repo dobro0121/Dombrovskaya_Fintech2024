@@ -67,7 +67,7 @@ class FilmAdapter:
         fun bind(film: FilmEntity) {
             Picasso.get()
                 .load(film.image)
-                .resize(120, 150)
+                .resize(200, 250)
                 .centerCrop()
                 .into(imageViewPoster)
             textViewNameOfFilm.text = film.filmName
