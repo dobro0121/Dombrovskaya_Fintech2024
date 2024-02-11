@@ -1,4 +1,4 @@
-package com.example.fintech_2024_dombrovskaya
+package com.example.fintech_2024_dombrovskaya.API
 
 object ApiRoutes {
     const val BASE_URL = "https://kinopoiskapiunofficial.tech"

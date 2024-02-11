@@ -72,6 +72,19 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp")
     implementation("com.squareup.okhttp3:logging-interceptor")
 
+    //Room
+    implementation ("androidx.room:room-runtime:2.6.1")
+    implementation ("androidx.room:room-ktx:2.6.1")
+    implementation("androidx.room:room-common:2.6.1")
+    implementation ("com.google.code.gson:gson:2.10")
+    implementation(kotlin("stdlib-jdk8"))
+    ksp("androidx.room:room-compiler:2.6.1")
+    ksp("androidx.lifecycle:lifecycle-common:2.7.0")
+
+    //Picasso
+    implementation ("com.squareup.picasso:picasso:2.8")
+
+    annotationProcessor ("androidx.room:room-compiler:2.6.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

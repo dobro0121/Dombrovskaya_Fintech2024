@@ -1,4 +1,4 @@
-package com.example.fintech_2024_dombrovskaya
+package com.example.fintech_2024_dombrovskaya.API
 
 import android.util.Log
 import com.example.fintech_2024_dombrovskaya.models.Description
@@ -20,7 +20,7 @@ import io.ktor.client.plugins.logging.Logger
 interface ApiService {
 
     suspend fun getPopularFilms(): List<Film>
-    suspend fun getDescriptionOfFilm(id: Int): Description
+    suspend fun getDescriptionOfFilm(id: Int?): Description
 
     companion object {
         fun create(): ApiService {

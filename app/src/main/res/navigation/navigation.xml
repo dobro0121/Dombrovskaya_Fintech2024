@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/favouriteFragment"
-        android:name="com.example.fintech_2024_dombrovskaya.FavouriteFragment"
+        android:name="com.example.fintech_2024_dombrovskaya.fragments.FavouriteFragment"
         android:label="fragment_favourite"
         tools:layout="@layout/fragment_favourite" >
         <action
@@ -16,10 +16,13 @@
         <action
             android:id="@+id/action_favouriteFragment_self"
             app:destination="@id/favouriteFragment" />
+        <action
+            android:id="@+id/action_favouriteFragment_to_filmFragment"
+            app:destination="@id/filmFragment" />
     </fragment>
     <fragment
         android:id="@+id/popularFragment"
-        android:name="com.example.fintech_2024_dombrovskaya.PopularFragment"
+        android:name="com.example.fintech_2024_dombrovskaya.fragments.PopularFragment"
         android:label="fragment_popular"
         tools:layout="@layout/fragment_popular" >
         <action
@@ -28,5 +31,20 @@
         <action
             android:id="@+id/action_popularFragment_self"
             app:destination="@id/popularFragment" />
+        <action
+            android:id="@+id/action_popularFragment_to_filmFragment"
+            app:destination="@id/filmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmFragment"
+        android:name="com.example.fintech_2024_dombrovskaya.fragments.FilmFragment"
+        android:label="fragment_film"
+        tools:layout="@layout/fragment_film" >
+        <action
+            android:id="@+id/action_filmFragment_to_popularFragment"
+            app:destination="@id/popularFragment" />
+        <action
+            android:id="@+id/action_filmFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
     </fragment>
 </navigation>

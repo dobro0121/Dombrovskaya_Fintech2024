@@ -1,4 +1,4 @@
-package com.example.fintech_2024_dombrovskaya
+package com.example.fintech_2024_dombrovskaya.API
 
 import com.example.fintech_2024_dombrovskaya.models.Description
 import com.example.fintech_2024_dombrovskaya.models.Film
@@ -40,7 +40,7 @@ class ApiServiceImpl(
         }
     }
 
-    override suspend fun getDescriptionOfFilm(id: Int): Description {
+    override suspend fun getDescriptionOfFilm(id: Int?): Description {
         try {
             val response: HttpResponse = client.get {
                 url(ApiRoutes.BASE_URL + ApiRoutes.DESCRIPTION + id.toString())

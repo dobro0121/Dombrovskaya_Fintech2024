@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.FilmFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewPosterIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/textViewFilmTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Изгой-Один: Звездные войны"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginVertical="12dp"/>
+
+            <TextView
+                android:id="@+id/textViewFilmDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сопротивление собирает отряд для выполнения особой миссии - надо выкрасть чертежи самого совершенного и мертоносного оружия Империи. Не всем суждено вернуться домой, но герои готовы к этому, ведь на кону судьба Галактики"
+                android:textSize="14sp"
+                android:maxLines="10"
+                android:minLines="1"
+                android:singleLine="false"
+                android:textColor="@color/gray"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/textViewFilmGenres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Жанры: фантастика, приключения"
+                android:textSize="14sp"
+                android:maxLines="3"
+                android:minLines="1"
+                android:singleLine="false"
+                android:textColor="@color/gray"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/textViewFilmCountries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Страны: США"
+                android:maxLines="2"
+                android:minLines="1"
+                android:singleLine="false"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/textViewFilmYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Год: 2022"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="12dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
