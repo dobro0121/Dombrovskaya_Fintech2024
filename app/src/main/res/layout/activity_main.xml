@@ -17,12 +17,13 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white"
+            app:layout_anchor="@+id/appBarLayout"
+            app:layout_anchorGravity="center"
             app:menu="@menu/top_bar"
             app:title="Популярные"
             app:titleTextAppearance="@style/CustomToolbarStyle">
 
         </com.google.android.material.appbar.MaterialToolbar>
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.fragment.app.FragmentContainerView

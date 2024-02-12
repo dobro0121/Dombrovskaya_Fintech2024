@@ -1,5 +1,6 @@
 package com.example.fintech_2024_dombrovskaya.activities
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         fragmentContainerView = this.findViewById(R.id.fragmentContainerView)
     }
 
-    /*override fun onStart() {
+    override fun onStart() {
         super.onStart()
 
         navController = findNavController(R.id.fragmentContainerView)
@@ -54,30 +55,30 @@ class MainActivity : AppCompatActivity() {
         appBarLayout.visibility = View.GONE
         bottomNavigation.visibility = View.GONE
 
-        fragmentContainerView.layoutParams.height = LayoutParams.MATCH_PARENT
-
         val marginLayoutParams =
-            layoutParams as ViewGroup.MarginLayoutParams
+            fragmentContainerView.layoutParams as ViewGroup.MarginLayoutParams
         marginLayoutParams.setMargins(0, 0, 0, 0)
 
-        val layoutParams = binding.fragmentContainerView.layoutParams
-        layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
-        binding.fragmentContainerView.layoutParams = layoutParams
+        val window = window
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+        window.statusBarColor = Color.TRANSPARENT
     }
 
     private fun showToolbarAndBottomNavigation() {
         appBarLayout.visibility = View.VISIBLE
         bottomNavigation.visibility = View.VISIBLE
 
-        fragmentContainerView.layoutParams.height = LayoutParams.WRAP_CONTENT
-
         val marginLayoutParams =
             fragmentContainerView.layoutParams as ViewGroup.MarginLayoutParams
         marginLayoutParams.setMargins(
             0,
-            160,
+            220,
             0,
-          75
+          260
         )
-    }*/
+
+        val window = window
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        window.statusBarColor = Color.WHITE
+    }
 }

@@ -3,6 +3,7 @@ package com.example.fintech_2024_dombrovskaya.database
 import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
@@ -11,31 +12,31 @@ import kotlinx.parcelize.Parcelize
 data class FilmEntity(
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "id")
-    val id: Int,
+    var id: Int? = 0,
 
     @ColumnInfo(name = "name")
-    val filmName: String?,
+    var filmName: String? = null,
 
     @ColumnInfo(name = "year")
-    val year: String?,
+    var year: String?= null,
 
     @ColumnInfo(name = "genre")
-    val genre: String?,
+    var genre: String?= null,
 
     @ColumnInfo(name = "country")
-    val country: String?,
+    var country: String?= null,
 
     @ColumnInfo(name = "description")
-    val description: String?,
+    var description: String?= null,
 
     @ColumnInfo(name = "image")
-    val image: String?,
+    var image: String?= null,
 
     @ColumnInfo(name = "isFavourite")
-    val isFavourite: Boolean?,
-
+    var isFavourite: Boolean? = false
 ): Parcelable {
-    constructor() : this(
+
+    @JvmOverloads constructor() : this(
         0,
         null,
         null,
