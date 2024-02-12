@@ -20,9 +20,7 @@ class FragmentViewModel(application: Application,
     private val favouriteFilmList = MutableLiveData<MutableList<FilmEntity>>()
 
     fun getListOfPopularFilms() = viewModelScope.launch {
-
         val filmItems = repository.getListOfPopularFilms()
-
         updateNewDataList(filmItems.toMutableList())
     }
 

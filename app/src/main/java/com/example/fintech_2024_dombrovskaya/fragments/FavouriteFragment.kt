@@ -70,7 +70,6 @@ class FavouriteFragment : Fragment() {
                 val film = adapter.currentList[position]
                 film.isFavourite = film.isFavourite != true
                 fragmentViewModel.updateFilm(film)
-                adapter.notifyItemChanged(position)
 
                 fragmentViewModel.getFavouriteDataList().observe(viewLifecycleOwner) { dataList ->
                     adapter.submitList(dataList)
